@@ -248,7 +248,7 @@ export default function Dashboard() {
                                                 </div>
                                             </div>
                                         </td>
-                                        <td className="py-2 px-4">{formattedValue(transaction.amount, true, "GBP")}</td>
+                                        <td className="py-2 px-4">{formattedValue(transaction.amount, true, "NGN")}</td>
                                         <td className="py-2 px-4 line-clamp-1 hidden md:table-cell">{new Date(transaction.transaction_date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</td>
                                     </tr>)}
                                 </tbody>
@@ -274,7 +274,7 @@ export default function Dashboard() {
                                         </div>
                                         <div className="flex items-center gap-2">
                                             <div className="flex-1">
-                                                <span className="font-medium">{formattedValue(transaction.amount, true, "GBP")}</span>
+                                                <span className="font-medium">{formattedValue(transaction.amount, true, "NGN")}</span>
                                             </div>
                                         </div>
                                     </div>

@@ -30,7 +30,7 @@ export function ChartRadialText({
     showPercentage = true,
     showLabel = true,
     isCurrency = false,
-    currencyCode = "GBP"
+    currencyCode = "NGN",
 }: ChartRadialTextProps) {
     const { innerRadius, outerRadius, polarRadius } = {
         sm: { innerRadius: 30, outerRadius: 43, polarRadius: [34, 28] },

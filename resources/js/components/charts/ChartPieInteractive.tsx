@@ -146,7 +146,7 @@ export function ChartPieInteractive({ title, description, chartData, chartConfig
                                                     y={viewBox.cy}
                                                     className="fill-foreground text-3xl font-bold"
                                                 >
-                                                    {formattedValue(safeChartData[safeActiveIndex].values, true, "GBP")}
+                                                    {formattedValue(safeChartData[safeActiveIndex].values, true, "NGN")}
                                                 </tspan>
                                                 <tspan
                                                     x={viewBox.cx}

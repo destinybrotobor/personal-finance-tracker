@@ -104,7 +104,7 @@ export default function BudgetForm({ onSubmit, errors, processing }: BudgetFormP
                     </div>
 
                     <div className="grid gap-2">
-                        <Label htmlFor="amount">Amount (£)*</Label>
+                        <Label htmlFor="amount">Amount (&#8358;)*</Label>
                         <Input
                             id="amount"
                             name="amount"

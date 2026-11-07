@@ -18,8 +18,8 @@ const BudgetCard = ({ budget, setShowAddModal } : { budget: any, setShowAddModal
                     <aside className='flex-1 flex justify-between items-start gap-3'>
                         <div>
                             <span className={`capitalize text-xs font-semibold ${budget.category.type === 'expenses' ? 'text-red-500' : budget.category.type === 'income' ? 'text-red-green' : 'text-corporate-blue'}`}>{ budget.category.type }</span>
-                            <h3 className='text-lg font-semibold'>{ formattedValue(budget.amount, true, 'GBP') }</h3>
-                            <p className='text-sm text-muted-foreground'> you have used { formattedValue(budget.spent, true, 'GBP') } of your budget on { budget.category.name }</p>
+                            <h3 className='text-lg font-semibold'>{ formattedValue(budget.amount, true, 'NGN') }</h3>
+                            <p className='text-sm text-muted-foreground'> you have used { formattedValue(budget.spent, true, 'NGN') } of your budget on { budget.category.name }</p>
                         </div>
                         <div className='flex items-center justify-between mt-2'>
                             <DropdownMenu>

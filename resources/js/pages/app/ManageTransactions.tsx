@@ -369,7 +369,7 @@ export default function ManageTransactions() {
                                 <TrendingUp className="h-4 w-4 text-green-600 absolute top-4 right-4" />
                             </CardHeader>
                             <CardContent>
-                                <div className="text-2xl font-bold text-green-900">{formattedValue(stats.totalIncome, true, "GBP")}</div>
+                                <div className="text-2xl font-bold text-green-900">{formattedValue(stats.totalIncome, true, "NGN")}</div>
                             </CardContent>
                         </Card>
 
@@ -379,7 +379,7 @@ export default function ManageTransactions() {
                                 <TrendingDown className="h-4 w-4 text-red-600 absolute top-4 right-4" />
                             </CardHeader>
                             <CardContent>
-                                <div className="text-2xl font-bold text-red-900">{formattedValue(stats.totalExpenses, true, "GBP")}</div>
+                                <div className="text-2xl font-bold text-red-900">{formattedValue(stats.totalExpenses, true, "NGN")}</div>
                             </CardContent>
                         </Card>
 
@@ -389,7 +389,7 @@ export default function ManageTransactions() {
                                 <PiggyBank className="h-4 w-4 text-blue-600 absolute top-4 right-4" />
                             </CardHeader>
                             <CardContent>
-                                <div className="text-2xl font-bold text-blue-900">{formattedValue(stats.totalSavings, true, "GBP")}</div>
+                                <div className="text-2xl font-bold text-blue-900">{formattedValue(stats.totalSavings, true, "NGN")}</div>
                             </CardContent>
                         </Card>
 
@@ -400,7 +400,7 @@ export default function ManageTransactions() {
                             </CardHeader>
                             <CardContent>
                                 <div className={`text-2xl font-bold ${stats.netAmount >= 0 ? 'text-green-900' : 'text-red-900'}`}>
-                                    {formattedValue(Math.abs(stats.netAmount), true, "GBP")}
+                                    {formattedValue(Math.abs(stats.netAmount), true, "NGN")}
                                     {stats.netAmount < 0 && ' (-)'}
                                 </div>
                             </CardContent>
@@ -532,7 +532,7 @@ export default function ManageTransactions() {
                                                                 transaction.type === 'expenses' ? 'text-red-600' : 'text-blue-600'
                                                                 }`}>
                                                                 {transaction.type === 'income' ? '+' : '-'}
-                                                                {formattedValue(transaction.amount, true, "GBP")}
+                                                                {formattedValue(transaction.amount, true, "NGN")}
                                                             </div>
                                                         </div>
 
@@ -689,7 +689,7 @@ export default function ManageTransactions() {
                         <AlertDialogTitle>Are you sure?</AlertDialogTitle>
                         <AlertDialogDescription>
                             This action cannot be undone. This will permanently delete the transaction
-                            {transactionToDelete && ` for ${formattedValue(transactionToDelete.amount, true, "GBP")}`}.
+                            {transactionToDelete && ` for ${formattedValue(transactionToDelete.amount, true, "NGN")}`}.
                         </AlertDialogDescription>
                     </AlertDialogHeader>
                     <AlertDialogFooter>

@@ -18,6 +18,7 @@ import BudgetCard from '@/components/custom/BudgetCard';
 import BudgetSummaryChart from '@/components/custom/BudgetSummaryChart';
 import { ca } from 'date-fns/locale';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { useFormattedValue } from '@/hooks/useFormattedValue';
 
 const breadcrumbs: BreadcrumbItem[] = [
     {
@@ -56,6 +57,7 @@ export default function Budgeting() {
     // State for form errors and processing
     const [errors, setErrors] = useState({});
     const [processing, setProcessing] = useState(false);
+    const formattedValue = useFormattedValue();
 
     const fetchBudgets = async () => {
         try {
@@ -245,17 +247,19 @@ export default function Budgeting() {
                                             <div>
                                                 <span className="capitalize"> Total {categoryName} Budgeted</span>
                                                 <h3 className='text-lg font-semibold'>
-                                                    {total.toLocaleString(undefined, { style: 'currency', currency: 'GBP', maximumFractionDigits: 0 })}
+                                                    { formattedValue(total, true, "NGN") }
                                                 </h3>
                                                 {categoryData.purpose === 'Savings' ? (
                                                     <div className="text-xs text-muted-foreground mt-1">
-                                                        <span>Saved: {saved.toLocaleString(undefined, { style: 'currency', currency: 'GBP', maximumFractionDigits: 0 })}</span><br />
-                                                        <span>Extra Saved: {extraSaved.toLocaleString(undefined, { style: 'currency', currency: 'GBP', maximumFractionDigits: 0 })}</span>
+                                                        {/* <span>Saved: {saved.toLocaleString(undefined, { style: 'currency', currency: 'NGN', maximumFractionDigits: 0 })}</span><br />
+                                                        <span>Extra Saved: {extraSaved.toLocaleString(undefined, { style: 'currency', currency: 'NGN', maximumFractionDigits: 0 })}</span> */}
+                                                        <span>Saved: { formattedValue(saved, true, "NGN") }</span><br />
+                                                        <span>Extra Saved: {formattedValue(extraSaved, true, "NGN")}</span>
                                                     </div>
                                                 ) : (
                                                     <div className="text-xs text-muted-foreground mt-1">
-                                                        <span>Spent: {spent.toLocaleString(undefined, { style: 'currency', currency: 'GBP', maximumFractionDigits: 0 })}</span><br />
-                                                        <span>Remaining: {remaining.toLocaleString(undefined, { style: 'currency', currency: 'GBP', maximumFractionDigits: 0 })}</span>
+                                                        <span>Spent: {formattedValue(spent, true, "NGN")}</span><br />
+                                                        <span>Remaining: { formattedValue(remaining, true, "NGN") }</span>
                                                     </div>
                                                 )}
                                             </div>

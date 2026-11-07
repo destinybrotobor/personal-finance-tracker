@@ -220,7 +220,7 @@ export default function TransactionForm({
                             <div className="grid gap-2">
                                 <Label htmlFor="amount" className="flex items-center gap-2">
                                     <PoundSterling className="h-4 w-4" />
-                                    Amount (£)*
+                                    Amount (&#8358;)*
                                 </Label>
                                 <Input
                                     id="amount"

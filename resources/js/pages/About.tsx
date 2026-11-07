@@ -43,18 +43,16 @@ const About = () => {
           </h2>
           <div className="bg-gray-50 border rounded-md p-6 text-gray-700 space-y-2">
             <p>
-              <span className="font-semibold">Name:</span> Obi Lucy Ogechi
+              <span className="font-semibold">Name:</span> Ibeh Doris Chidimma
             </p>
             <p>
-              <span className="font-semibold">University:</span> Robert Gordon
-              University
+              <span className="font-semibold">University:</span> Chukwuemeka Odumegwu Ojukwu University, Uli, Anambra State, Nigeria
             </p>
             <p>
-              <span className="font-semibold">Student ID:</span> 2335201
+              <span className="font-semibold">Student ID:</span> 2025223001
             </p>
             <p>
-              <span className="font-semibold">Program:</span> Information
-              Technology
+              <span className="font-semibold">Program:</span> Computer Science, PGD
             </p>
           </div>
         </section>
